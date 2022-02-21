@@ -124,6 +124,13 @@ ul {
 }
 /* Герой */
 .hero {
+  height: 600px;
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/home/img0.jpg);
+
   background-color: #2f303a;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -249,6 +256,9 @@ ul {
 
   background-color: #ffffff;
   border-radius: 4px;
+
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.14),
+    0 1px 3px rgba(0, 0, 0, 0.12);
 }
 .team-box {
   text-align: center;
@@ -338,12 +348,19 @@ ul {
   background-color: var(--accent-color);
   color: #ffffff;
   cursor: pointer;
+
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08),
+    0 3px 1px rgba(0, 0, 0, 0.1);
 }
 .services-list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
+}
+.services-item:hover {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0 4px 4px rgba(0, 0, 0, 0.06),
+    0 1px 1px rgba(0, 0, 0, 0.12);
 }
 .services-list > .item {
   flex-basis: calc(100% / 3 - 30px);
