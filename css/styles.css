@@ -7,6 +7,7 @@
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
   --accent-color: #2196f3;
+  --social-link-color: #afb1b8;
   --nav-gap: 32px;
 }
 /* Общее */
@@ -49,12 +50,14 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 .link {
   text-decoration: none;
 }
 .item {
   list-style-type: none;
 }
+
 /* Лого */
 .header-contacts .container {
   display: flex;
@@ -104,24 +107,39 @@ ul {
 .nav-item:first-child {
   padding-left: 93px;
 }
-.header-contacts-list {
-  display: flex;
+
+/* Контакты */
+.header-contacts-wrapper {
   margin-left: auto;
 }
-/* Контакты */
+.header-contacts-list {
+  display: flex;
+  align-items: center;
+}
+.header-contacts-item:not(:first-child) {
+  margin-left: 30px;
+}
+
 .header-contacts-link {
+  display: flex;
+  align-items: center;
+
   color: var(--secondary-text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+
 .header-contacts-link:hover,
 .header-contacts-link:focus {
   color: var(--accent-color);
 }
-.header-contacts-item:not(:first-child) {
-  padding-left: 50px;
+
+.header-link-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
+
 /* Герой */
 .hero {
   height: 600px;
@@ -130,6 +148,11 @@ ul {
   margin-left: auto;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/home/img0.jpg);
+
+  /* Если будет менятся картинка */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   background-color: #2f303a;
   padding-top: 200px;
@@ -167,8 +190,6 @@ ul {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-
-  /* height: 50px; */
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -195,6 +216,15 @@ ul {
 .features-list {
   display: flex;
 }
+.features-box {
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  text-align: center;
+  padding: 20px 100px;
+  margin-bottom: 30px;
+}
+
 .features-subtitle {
   margin-bottom: 10px;
 
@@ -219,7 +249,8 @@ ul {
   padding-top: 0;
 }
 .work-title,
-.team-title {
+.team-title,
+.client-title {
   margin-bottom: 50px;
 
   font-size: 36px;
@@ -247,6 +278,8 @@ ul {
 }
 .team-list {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   margin-left: -30px;
 }
 .team-item {
@@ -259,10 +292,12 @@ ul {
 
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.14),
     0 1px 3px rgba(0, 0, 0, 0.12);
+
+  text-align: center;
 }
 .team-box {
-  text-align: center;
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .team-subtitle {
   margin-bottom: 10px;
@@ -273,18 +308,76 @@ ul {
   letter-spacing: 0.03em;
 }
 .team-text {
+  margin-bottom: 16px;
+
   color: var(--secondary-text-color);
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
+.team-social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team-social-item:not(:first-child) {
+  margin-left: 10px;
+}
+
+.team-link {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+
+  color: var(--social-link-color);
+}
+.team-link-icon {
+  fill: currentColor;
+}
+.team-link:hover,
+.team-link:focus {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
+/* Клиенты */
+.client-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.client-item:not(:first-child) {
+  margin-left: 30px;
+}
+.client-link {
+  display: block;
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+  border: 1px solid var(--social-link-color);
+  fill: var(--social-link-color);
+}
+
+.client-link:hover,
+.client-link:focus {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+
 /* Футер */
 .footer-contacts {
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.container > .logo {
+.footer-contact-wrapper > .logo {
   padding-top: 0;
   margin-bottom: 20px;
 
@@ -318,6 +411,51 @@ ul {
 .footer-contacts-link:focus {
   color: var(--accent-color);
 }
+.footer-contacts > .container {
+  display: flex;
+}
+.footer-social-wrapper {
+  margin-top: 15px;
+  margin-left: 70px;
+}
+.footer-social-text {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+}
+.footer-list {
+  display: flex;
+  margin-top: 20px;
+}
+.footer-social-item:not(:first-child) {
+  margin-left: 10px;
+}
+.footer-link {
+  display: flex;
+
+  width: 44px;
+  height: 44px;
+
+  justify-content: center;
+  align-items: center;
+
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.footer-link-icon {
+  fill: currentColor;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  background-color: var(--accent-color);
+}
+
 /* Портфолио */
 .filter-list {
   display: flex;
@@ -327,7 +465,7 @@ ul {
   margin-bottom: 50px;
 }
 .filter-item:not(:first-child) {
-  margin-left: 8px;
+  margin-left: 10px;
 }
 .filter-btn {
   display: block;
@@ -358,7 +496,8 @@ ul {
   margin-left: -30px;
   margin-top: -30px;
 }
-.services-item:hover {
+.services-item:hover,
+.services-item:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0 4px 4px rgba(0, 0, 0, 0.06),
     0 1px 1px rgba(0, 0, 0, 0.12);
 }
