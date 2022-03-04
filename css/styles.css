@@ -217,11 +217,12 @@ ul {
   display: flex;
 }
 .features-box {
+  display: flex;
   width: 270px;
   height: 120px;
   background-color: #f5f4fa;
-  text-align: center;
-  padding: 20px 100px;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
 }
 
@@ -350,19 +351,20 @@ ul {
 /* Клиенты */
 .client-list {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .client-item:not(:first-child) {
   margin-left: 30px;
 }
 .client-link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 170px;
   height: 92px;
-  padding: 16px 32px;
+  /* padding: 16px 32px; */
   border: 1px solid var(--social-link-color);
   fill: var(--social-link-color);
+  border-radius: 4px;
 }
 
 .client-link:hover,
