@@ -415,9 +415,9 @@ ul {
 }
 .footer-contacts > .container {
   display: flex;
+  align-items: baseline;
 }
 .footer-social-wrapper {
-  margin-top: 15px;
   margin-left: 70px;
 }
 .footer-social-text {
@@ -498,8 +498,11 @@ ul {
   margin-left: -30px;
   margin-top: -30px;
 }
-.services-item:hover,
-.services-item:focus {
+.services-link {
+  display: block;
+}
+.services-link:hover,
+.services-link:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0 4px 4px rgba(0, 0, 0, 0.06),
     0 1px 1px rgba(0, 0, 0, 0.12);
 }
@@ -507,7 +510,6 @@ ul {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
-  overflow: hidden;
 }
 
 .services-box {
